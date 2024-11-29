@@ -234,7 +234,7 @@ class lakes_reservoirs(object):
         """
         Initialize water bodies
         Read parameters from maps e.g
-        area, location, initial average discharge, type 9reservoir or lake) etc.
+        area, location, initial average discharge, type (reservoir or lake) etc.
 
         Compress numpy array from mask map to the size of lakes+reservoirs
         (marked as capital C at the end of the variable name)
@@ -413,7 +413,7 @@ class lakes_reservoirs(object):
             self.var.lakeEvaFactorC = np.compress(self.var.compress_LR, self.var.lakeEvaFactor)
 
             # initial only the big arrays are set to 0,
-            # the  initial values are loaded inside the subroutines of lakes and reservoirs
+            # the initial values are loaded inside the subroutines of lakes and reservoirs
             self.var.reslakeoutflow = globals.inZero.copy()
             self.var.lakeVolume = globals.inZero.copy()
             self.var.outLake = self.var.load_initial("outLake")
@@ -496,7 +496,7 @@ class lakes_reservoirs(object):
     def initial_reservoirs(self):
         """
         Initial part of the reservoir module
-        Using the appraoch of LISFLOOD
+        Using the approach of LISFLOOD
 
         See Also:
             LISFLOOD manual Annex 1: (Burek et al. 2013)
